@@ -1,5 +1,4 @@
 import fs from "fs";
-
 import chalk from 'chalk';
 
 const regex = '/\[([^[\]]*?)\]\((https?:\/\/[^\s?#.]*[^\s]*)\)/gm';
@@ -15,7 +14,6 @@ function extraiLinks (texto){
 
     //operador de espalhamento
     const capturas=[...texto.matchAll(regex)];
-
     const resultados=capturas.map(captura=>({[captura[1]]:captura[2]}));
 
     // console.log(capturas);
@@ -24,15 +22,10 @@ function extraiLinks (texto){
 }
 
 // extraiLinks(texto);
-
 // console.log(chalk.blue('Olá mundo'));
-
 // console.log(chalk.blue.bgWhite.bold("SENAI"));
-
 // console.log(chalk.blue('Curso',' de',' Node.JS'));
-
 // console.log(chalk.red('vermelho',chalk.underline.bgBlue('azul')));
-
 // console.log(`
 // CPU: ${chalk.red('90%')}
 // RAM: ${chalk.green('40%')}
@@ -83,10 +76,8 @@ async function pegaArquivo(caminhoDoArquivo){
     } finally {
         console.log(chalk.magenta('Operação concluída'));
     }
-
 }
 
 export default pegaArquivo;
     // pegaArquivo('./arquivos/texto.md');
 // //pegaArquivo('./arquivos/');
-

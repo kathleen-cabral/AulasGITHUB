@@ -20,7 +20,7 @@ async function imprimeLista(valida,resultado, identificador=""){
     else{
         console.log(chalk.yellow('Lista de Links'),
         chalk.black.bgGreen(identificador),
-        listaValidada(resultado));
+        (resultado));
     }
 }
 
